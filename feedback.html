@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feedback — Aperture & Ember</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="feedback.css">
+</head>
+<body>
+<div class="ambient"></div><div class="grain"></div>
+<header>
+  <div class="brand"><div class="brand-mark"></div><div class="brand-text"><div class="name">Aperture &amp; Ember</div><div class="sub">BY KAI YANG &amp; ZI YU</div></div></div>
+  <nav>
+    <a href="index.html" class="">Home</a>
+    <a href="about.html" class="">About</a>
+    <a href="photography.html" class="">Photography</a>
+    <a href="community.html" class="">Community</a>
+    <a href="feedback.html" class="active">Feedback</a>
+    </nav>
+</header>
+<main class="page-main">
+<section class="page-hero"><div class="eyebrow">Feedback</div><h1>Tell us what <span class="accent">caught your eye.</span></h1><p>Liked a shot? Think a corner is underexposed? We read every note and it helps shape what we shoot next.</p></section>
+<div class="form-page"><form class="form-card" id="feedbackForm">
+<div class="fb-form">
+<div class="row"><div class="field"><label>Name</label><input type="text" required placeholder="Your name"></div><div class="field"><label>Email</label><input type="email" required placeholder="you@email.com"></div></div>
+<div class="field"><label>Favourite photo</label><select><option>Neon Alley</option><option>Still Water</option><option>First Light</option><option>Warm Frame</option></select></div>
+<div class="field"><label>Rate it</label><div class="rating" id="stars"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span></div></div>
+<div class="field"><label>Your feedback</label><textarea rows="5" required placeholder="What did you think?"></textarea></div>
+<button type="submit" class="btn btn-solid">✈ Send Feedback</button>
+<div class="success-message" id="successMessage">Thank you! Your feedback has been received.</div>
+</div></form></div>
+</main>
+<footer><div class="fmark"><div class="brand-mark" style="width:26px;height:26px;"></div>Aperture &amp; Ember</div><div>© 2026 Kai Yang &amp; Zi Yu · A weekend hobby, shared publicly.</div></footer>
+<script src="feedback.js"></script>
+</body>
+</html>
