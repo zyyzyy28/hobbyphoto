@@ -16,97 +16,57 @@
 <script src="./js/main.js"></script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg topnav">
-        <div class="container">
-            <a class="navbar-brand title" href="index.html">
-                <img class="nav_logo" src="./images/icon.png" alt="Hobby Website">
-                <span>Photography Website<span class="subtitle">by Kai Yang &amp; Zi Yu</span></span>
-            </a>
-            <button class="navbar-toggler collapsed" type="button" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <div class="navbar-collapse" id="navMenu">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link topnav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link topnav-link" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link topnav-link" href="photography.html">Photography</a></li>
-                    <li class="nav-item"><a class="nav-link topnav-link topnav-link-active" href="community.html">Community</a></li>
-                    <li class="nav-item"><a class="nav-link topnav-link" href="feedback.html">Feedback</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+<nav class="navbar navbar-expand-lg topnav">
+<div class="container">
+<a class="navbar-brand title" href="index.html">
+<img class="nav_logo" src="./images/icon.png" alt="Hobby Website">
+<span>Photography Website<span class="subtitle">by Kai Yang &amp; Zi Yu</span></span>
+</a>
+<button class="navbar-toggler collapsed" type="button" aria-label="Toggle navigation">
+<span></span>
+<span></span>
+<span></span>
+</button>
+<div class="navbar-collapse" id="navMenu">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link topnav-link" href="index.html">Home</a></li>
+<li class="nav-item"><a class="nav-link topnav-link" href="about.html">About</a></li>
+<li class="nav-item"><a class="nav-link topnav-link" href="photography.html">Photography</a></li>
+<li class="nav-item"><a class="nav-link topnav-link" href="community.html">Community</a></li>
+<li class="nav-item"><a class="nav-link topnav-link" href="feedback.html">Feedback</a></li>
+</ul>
+</div>
+</div>
+</nav>
 
-    <header class="community-header">
-        <div class="community-header-bg" aria-hidden="true"></div>
-        <div class="container">
-            <div class="reveal text-center">
-                <span class="eyebrow">Community Gallery</span>
-                <h1 class="community-header-title">Shared by <span class="accent">You</span></h1>
-                <p class="intro community-header-intro mx-auto">Upload your own shots, like the ones you love, and leave a comment for the photographer.</p>
-            </div>
-        </div>
-    </header>
-
-    <section class="section community-upload-section" id="upload">
-        <div class="container">
-            <div class="community-upload-card reveal">
-                <span class="eyebrow">Add Your Photo</span>
-                <h2 class="community-upload-heading">Upload a Shot</h2>
-
-                <form id="uploadForm" class="upload-form" novalidate>
-                    <div class="upload-dropzone" id="uploadDropzone" tabindex="0" role="button" aria-label="Choose a photo to upload">
-                        <input type="file" id="uploadFileInput" class="upload-file-input" accept="image/*" hidden required>
-                        <div class="upload-dropzone-placeholder" id="uploadDropzonePlaceholder">
-                            <i class="fa-solid fa-camera upload-dropzone-icon"></i>
-                            <p class="upload-dropzone-text">Click to choose a photo, or drag one here</p>
-                        </div>
-                        <img id="uploadPreviewImage" class="upload-preview-image d-none" alt="Selected photo preview">
-                    </div>
-
-                    <div class="upload-fields-row">
-                        <div class="upload-field">
-                            <label for="uploadNameInput" class="upload-field-label">Your name</label>
-                            <input type="text" id="uploadNameInput" class="upload-name-input" placeholder="e.g. Zi Yu" maxlength="40" required>
-                        </div>
-                        <div class="upload-field">
-                            <label for="uploadCaptionInput" class="upload-field-label">Caption / location</label>
-                            <input type="text" id="uploadCaptionInput" class="upload-caption-input" placeholder="e.g. Sunset over the canal" maxlength="120" required>
-                        </div>
-                    </div>
-
-                    <p id="uploadErrorMessage" class="upload-error-message d-none">Please choose a photo and fill in both fields.</p>
-
-                    <button type="submit" class="upload-submit-btn btn-glow">
-                        <i class="fa-solid fa-upload me-2"></i>Upload Photo
-                    </button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <section class="section community-gallery-section pt-0" id="gallery">
-        <div class="container">
-            <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 reveal community-gallery-header">
-                <div>
-                    <span class="eyebrow">Browse</span>
-                    <h2 class="community-gallery-heading">Community Photos</h2>
-                </div>
-                <span id="communityPhotoCount" class="community-photo-count">0 photos</span>
-            </div>
-
-            <div id="communityGallery" class="community-gallery reveal"></div>
-
-            <p id="communityEmptyMessage" class="community-empty-message text-dim text-center d-none">
-                No photos yet — be the first to upload one above!
-            </p>
-        </div>
-    </section>
-
-    <div class="credit-line">Hobby Website<br>Made by <span class="accent">Kai Yang &amp; Zi Yu</span></div>
-
-    <script src="./js/community.js"></script>
+<div class="container">
+<div class="community-title">
+<h1>Community Photos</h1>
+<p class="text-dim">Upload a photo, like the ones you enjoy, and leave a comment!</p>
+</div>
+</div>
+<div class="container">
+<div class="upload-box">
+<h2>Upload a Photo</h2>
+<form id="uploadForm">
+<label for="uploadFileInput">Choose photo:</label><br>
+<input type="file" id="uploadFileInput" accept="image/*"><br><br>
+<img id="previewImg" class="preview-img" style="display:none;"><br>
+<label for="nameInput">Your name:</label><br>
+<input type="text" id="nameInput" placeholder="Your name"><br><br>
+<label for="captionInput">Caption:</label><br>
+<input type="text" id="captionInput" placeholder="Say something about the photo"><br><br>
+<p id="errorMsg" class="error-msg" style="display:none;">Please choose a photo and fill in both boxes.</p>
+<button type="submit" class="btn-glow">Upload</button>
+</form>
+</div>
+</div>
+<div class="container">
+<h2 class="gallery-title">All Photos</h2>
+<div id="gallery" class="gallery"></div>
+<p id="emptyMsg" class="text-dim">No photos yet. Be the first to upload one!</p>
+</div>
+<div class="credit-line">Hobby Website<br>Made by <span class="accent">Kai Yang &amp; Zi Yu</span></div>
+<script src="./js/community.js"></script>
 </body>
 </html>
